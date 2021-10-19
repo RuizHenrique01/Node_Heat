@@ -1,5 +1,4 @@
 import { Request, Response } from "express";
-import { AuthenticateUserService } from "../services/AuthenticateUserService";
 import { CreateMessageService } from "../services/CreateMessageService";
 
 class CreateMessageController {
@@ -9,7 +8,7 @@ class CreateMessageController {
 
     const service = new CreateMessageService();
 
-    const result = await service.excute(message, user_id);
+    const result = await service.execute(message, user_id);
 
     return response.json(result);
   }
